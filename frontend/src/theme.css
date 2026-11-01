@@ -1,0 +1,117 @@
+/* The token contract, and the whole of this site's art direction: :root holds
+   the values, @theme inline turns them into utilities. One colour scheme,
+   deliberately — this site is dark: a midnight ground, a lifted slate for
+   blocks, mint for anything recovered. */
+:root {
+  /* Surfaces: a midnight page, a lifted slate for raised blocks. */
+  --background: oklch(0.18 0.022 274);
+  --foreground: oklch(0.96 0.008 270); /* near-white with a cool cast */
+  --card: oklch(0.226 0.026 274);
+  --card-foreground: oklch(0.96 0.008 270);
+  --popover: oklch(0.235 0.028 274);
+  --popover-foreground: oklch(0.96 0.008 270);
+
+  /* Mint is the brand: the mark, the primary action, and only what is
+     recovered (found / returned) may also carry it. */
+  --primary: oklch(0.79 0.135 176);
+  --primary-foreground: oklch(0.19 0.03 274);
+
+  --secondary: oklch(0.262 0.03 274);
+  --secondary-foreground: oklch(0.94 0.01 270);
+
+  --muted: oklch(0.246 0.026 274);
+  --muted-foreground: oklch(0.755 0.022 268);
+
+  --accent: oklch(0.285 0.042 264); /* soft blue-violet tint */
+  --accent-foreground: oklch(0.95 0.012 264);
+
+  /* Emerald: found / returned / recovered actions only. */
+  --success: oklch(0.79 0.135 176);
+  --success-foreground: oklch(0.19 0.03 274);
+  --success-soft: oklch(0.3 0.055 176);
+  --success-soft-foreground: oklch(0.88 0.11 176);
+
+  /* Lavender: matches and suggestions, a second tint, never a second accent. */
+  --lavender: oklch(0.31 0.05 292);
+  --lavender-foreground: oklch(0.87 0.085 292);
+
+  --destructive: oklch(0.72 0.16 22);
+  --warning-soft: oklch(0.32 0.055 74);
+  --warning-soft-foreground: oklch(0.89 0.1 80);
+
+  --border: oklch(0.32 0.026 274);
+  --input: oklch(0.36 0.028 274);
+  --ring: oklch(0.79 0.135 176);
+
+  --font-heading: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-label: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --radius: 0.75rem;
+  /* A pill radius is for controls. Panels take the same corner up to a bound,
+     so a reference that says 999px does not make every card a lozenge. */
+  --radius-panel: min(var(--radius), 1.5rem);
+  --shadow: 0 1px 2px oklch(0.1 0.02 274 / 0.45), 0 12px 32px oklch(0.1 0.02 274 / 0.35);
+  --shadow-lift: 0 2px 4px oklch(0.1 0.02 274 / 0.5), 0 22px 48px oklch(0.1 0.02 274 / 0.55);
+
+  --hero-size: clamp(2.5rem, 5.4vw, 4.25rem);
+  --hero-mobile: clamp(2.1rem, 8.6vw, 3.25rem);
+  --heading-tracking: -0.025em;
+  --heading-line: 1.1;
+  --heading-weight: 700;
+  --body-size: 1rem;
+  --body-line: 1.65;
+
+  --content-width: 1200px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --section-space: clamp(3.5rem, 7vw, 6rem);
+  --layout-gap: 2rem;
+  --motion-fast: 180ms;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-success-soft: var(--success-soft);
+  --color-success-soft-foreground: var(--success-soft-foreground);
+  --color-lavender: var(--lavender);
+  --color-lavender-foreground: var(--lavender-foreground);
+  --color-destructive: var(--destructive);
+  --color-warning-soft: var(--warning-soft);
+  --color-warning-soft-foreground: var(--warning-soft-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+  --font-label: var(--font-label);
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
+
+  /* shadcn's own mapping: rounded-md is the control, rounded-xl the panel. */
+  --radius-sm: max(0px, calc(var(--radius-panel) - 6px));
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius-panel);
+  --radius-xl: calc(var(--radius-panel) + 6px);
+
+  --shadow-raised: var(--shadow);
+  --shadow-lift: var(--shadow-lift);
+  --spacing-gutter: var(--gutter);
+  --spacing-section: var(--section-space);
+  --spacing-layout: var(--layout-gap);
+  --container-content: var(--content-width);
+}

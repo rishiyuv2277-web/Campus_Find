@@ -1,0 +1,4 @@
+/* The site's faces. Imported before Tailwind because CSS requires a remote
+   @import at the top of the bundled sheet. Changing a face means changing this
+   import and the --font-* values in theme.css together. */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap');
