@@ -1,4 +1,7 @@
 # CampusFind — Connected Frontend + Java Backend Starter
+## Live Project
+
+🌐 **CampusFind Website:** https://campusfind-kappa.vercel.app/
 
 This bundle contains the CampusFind frontend updated to call the Java Spring Boot REST API, plus the MySQL-backed backend project.
 
